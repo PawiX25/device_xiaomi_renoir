@@ -12,16 +12,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/renoir/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := renoir
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := M2101K9G
-PRODUCT_NAME := aosp_renoir
+PRODUCT_NAME := bootleg_renoir
 
 PRODUCT_SYSTEM_NAME := renoir_global
 PRODUCT_SYSTEM_DEVICE := renoir
+WITH_GAPPS := true
+BOOTLEGGERS_BUILD_APPS_BUNDLE = true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="renoir_global-user 12 SKQ1.211006.001 V13.0.9.0.SKIMIXM release-keys" \
